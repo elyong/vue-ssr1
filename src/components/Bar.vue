@@ -21,6 +21,13 @@ export default {
 
   mounted() {
     let store = this.$store
+    fetchInitialData({ store })
+  },
+
+  computed: {
+    msg() {
+      return this.$store.state.bar
+    }
   }
 }
 </script>
